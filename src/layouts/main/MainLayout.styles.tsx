@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/responsive';
 
 interface WrapperProps {
   src: string;
@@ -16,4 +17,8 @@ export const PageContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1440px;
+
+  ${device.smallDesktop} {
+    padding-top: 40px;
+  }
 `;

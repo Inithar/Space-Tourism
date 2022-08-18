@@ -5,7 +5,9 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        font-family: 'Nunito Sans', sans-serif;
+        font-family: 'Barlow', sans-serif;
+        /* font-family: 'Barlow Condensed', sans-serif;
+        font-family: 'Bellefair', serif; */
         scroll-behavior: smooth;
         overflow-x: hidden;
     }
