@@ -33,7 +33,7 @@ export const Navigation = () => {
         ) : (
           <LinksContainer>
             <Link to={'/'}>{isDesktop && <Number>00</Number>} Home</Link>
-            <Link to={'/destination'}>{isDesktop && <Number>01</Number>} Destination</Link>
+            <Link to={'/destination/moon'}>{isDesktop && <Number>01</Number>} Destination</Link>
             <Link to={'/crew'}>{isDesktop && <Number>02</Number>} Crew</Link>
             <Link to={'/technology'}>{isDesktop && <Number>03</Number>} Technology</Link>
           </LinksContainer>
@@ -47,7 +47,7 @@ export const Navigation = () => {
           <MobileLink to={'/'} onClick={toggleMobileNavigation}>
             <Number>00</Number> Home
           </MobileLink>
-          <MobileLink to={'/destination'} onClick={toggleMobileNavigation}>
+          <MobileLink to={'/destination/moon'} onClick={toggleMobileNavigation}>
             <Number>01</Number> Destination
           </MobileLink>
           <MobileLink to={'/crew'} onClick={toggleMobileNavigation}>
