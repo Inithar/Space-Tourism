@@ -7,7 +7,7 @@ interface WrapperProps {
 
 export const Wrapper = styled.div<WrapperProps>`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(${({ src }) => src});
   background-size: cover;
   background-position: center;
