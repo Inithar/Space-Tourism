@@ -1,9 +1,22 @@
+import { useMemo } from 'react';
+import { useCurrentLocation } from '../../hooks/useCurrentLocation';
+
 import data from '../../data/data.json';
 
 import { Header } from '../../components/header/Header';
-import { Image, Wrapper } from './Destination.styles';
-import { useCurrentLocation } from '../../hooks/useCurrentLocation';
-import { useMemo } from 'react';
+import {
+  Line,
+  Container,
+  DataContainer,
+  DestinationDescription,
+  DestinationName,
+  Image,
+  Wrapper,
+  DataNumbersContainer,
+  DataBox,
+  DataName,
+  DataValue,
+} from './Destination.styles';
 
 export const Destination = () => {
   const destinationName = useCurrentLocation(2);
@@ -23,10 +36,29 @@ export const Destination = () => {
     }
   }, [destinationName]);
 
+  const { name, images, description, distance, travel } = data.destinations[destinationIndex];
+
   return (
     <Wrapper>
       <Header text="Pick your destination" number="01" />
-      <Image src={data.destinations[destinationIndex].images.png} />
+      <Container>
+        <Image src={images.png} />
+        <DataContainer>
+          <DestinationName>{name}</DestinationName>
+          <DestinationDescription>{description}</DestinationDescription>
+          <Line />
+          <DataNumbersContainer>
+            <DataBox>
+              <DataName>Avg. Distance</DataName>
+              <DataValue>{distance}</DataValue>
+            </DataBox>
+            <DataBox>
+              <DataName>est. travel time</DataName>
+              <DataValue>{travel}</DataValue>
+            </DataBox>
+          </DataNumbersContainer>
+        </DataContainer>
+      </Container>
     </Wrapper>
   );
 };

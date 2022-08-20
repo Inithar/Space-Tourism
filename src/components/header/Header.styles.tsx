@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/responsive';
 
 export const Text = styled.h1`
   margin: 0;
@@ -10,6 +11,21 @@ export const Text = styled.h1`
   text-transform: uppercase;
   font-weight: 400;
   color: ${({ theme }) => theme.pureWhiteColor};
+
+  ${device.bigMobile} {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+
+  ${device.tablet} {
+    margin-top: 40px;
+    text-align: start;
+  }
+
+  ${device.smallDesktop} {
+    margin-top: 76px;
+  }
 `;
 
 export const Number = styled.span`
