@@ -7,164 +7,164 @@ import burgerIcon from '../../assets/shared/icon-hamburger.svg';
 import closeIcon from '../../assets/shared/icon-close.svg';
 
 interface MobileNavigationProps {
-  isOpen: boolean;
+    isOpen: boolean;
 }
 
 export const Wrapper = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 24px;
-  height: 96px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 96px;
 
-  ${device.tablet} {
-    padding-right: 0;
-    padding-left: 39px;
-  }
+    ${device.tablet} {
+        padding-right: 0;
+        padding-left: 39px;
+    }
 
-  ${device.smallDesktop} {
-    padding-left: 55px;
-  }
+    ${device.smallDesktop} {
+        padding-left: 55px;
+    }
 `;
 
 export const LogoIcon = styled.img.attrs({
-  src: logoIcon,
+    src: logoIcon,
 })`
-  margin-right: auto;
-  width: 40px;
-  height: 40px;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
 `;
 
 export const BurgerIcon = styled.img.attrs({
-  src: burgerIcon,
+    src: burgerIcon,
 })``;
 
 export const LinksContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 48px;
-  padding-right: 46px;
-  width: 450px;
-  height: 100%;
-  background-color: ${({ theme }) => theme.navigationBackgroundColor};
-  backdrop-filter: blur(81px);
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+    padding-right: 46px;
+    width: 450px;
+    height: 100%;
+    background-color: ${({ theme }) => theme.navigationBackgroundColor};
+    backdrop-filter: blur(81px);
 
-  ${device.smallDesktop} {
-    padding-left: 123px;
-    padding-right: 165px;
-    width: 830px;
-  }
+    ${device.smallDesktop} {
+        padding-left: 123px;
+        padding-right: 165px;
+        width: 830px;
+    }
 `;
 
 export const Link = styled(NavLink)`
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-right: 37px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 2.36px;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.pureWhiteColor};
-  text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 37px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.36px;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.pureWhiteColor};
+    text-decoration: none;
 
-  ${device.smallDesktop} {
-    margin-right: 48px;
-  }
+    ${device.smallDesktop} {
+        margin-right: 48px;
+    }
 
-  &:hover::before {
-    opacity: 0.5;
-  }
+    &:hover::before {
+        opacity: 0.5;
+    }
 
-  &[class*='active']::before {
-    opacity: 1;
-  }
+    &[class*='active']::before {
+        opacity: 1;
+    }
 
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: -35px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: ${({ theme }) => theme.pureWhiteColor};
-    opacity: 0;
-    transition: opacity 1s;
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: ${({ theme }) => theme.pureWhiteColor};
+        opacity: 0;
+        transition: opacity 1s;
+    }
 `;
 
 export const Number = styled.span`
-  margin-right: 14px;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  font-weight: 700;
-  color: ${({ theme }) => theme.pureWhiteColor};
+    margin-right: 14px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.pureWhiteColor};
 `;
 
 export const Line = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 800px;
-  left: 167px;
-  transform: translateY(-50%);
-  height: 1px;
-  background-color: ${({ theme }) => theme.pureWhiteColor};
-  opacity: 0.25;
+    position: absolute;
+    top: 50%;
+    right: 800px;
+    left: 167px;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: ${({ theme }) => theme.pureWhiteColor};
+    opacity: 0.25;
 `;
 
 export const MobileNavigation = styled.div<MobileNavigationProps>`
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 254px;
-  height: 100%;
-  background-color: ${({ theme }) => theme.navigationBackgroundColor};
-  backdrop-filter: blur(81px);
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(200%)')};
-  transition: transform 0.3s;
-  overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 254px;
+    height: 100%;
+    background-color: ${({ theme }) => theme.navigationBackgroundColor};
+    backdrop-filter: blur(81px);
+    transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(200%)')};
+    transition: transform 0.3s;
+    overflow: hidden;
 `;
 
 export const CloseIcon = styled.img.attrs({
-  src: closeIcon,
+    src: closeIcon,
 })`
-  display: block;
-  margin-top: 34px;
-  margin-left: auto;
-  margin-right: 26px;
+    display: block;
+    margin-top: 34px;
+    margin-left: auto;
+    margin-right: 26px;
 `;
 
 export const MobileLinksContainer = styled.div`
-  padding-top: 65px;
+    padding-top: 65px;
 `;
 
 export const MobileLink = styled(NavLink)`
-  position: relative;
-  display: flex;
-  margin-left: 32px;
-  margin-bottom: 32px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.pureWhiteColor};
-  text-decoration: none;
+    position: relative;
+    display: flex;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.pureWhiteColor};
+    text-decoration: none;
 
-  &[class*='active']::after {
-    opacity: 1;
-  }
+    &[class*='active']::after {
+        opacity: 1;
+    }
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 4px;
-    height: 100%;
-    background-color: ${({ theme }) => theme.pureWhiteColor};
-    opacity: 0;
-  }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background-color: ${({ theme }) => theme.pureWhiteColor};
+        opacity: 0;
+    }
 `;
