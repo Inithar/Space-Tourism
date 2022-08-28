@@ -31,3 +31,11 @@ export const crewImages: Images = {
         desktop: '../images/crew/background-crew-desktop.jpg',
     },
 };
+
+export const technologyImages: Images = {
+    background: {
+        mobile: '../images/technology/background-technology-mobile.jpg',
+        tablet: '../images/technology/background-technology-tablet.jpg',
+        desktop: '../images/technology/background-technology-desktop.jpg',
+    },
+};

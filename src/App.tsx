@@ -25,7 +25,10 @@ function App() {
                         <Route index element={<Crew />} />
                         <Route path=":member" element={<Crew />} />
                     </Route>
-                    <Route path="technology" element={<Technology />} />
+                    <Route path="technology">
+                        <Route index element={<Technology />} />
+                        <Route path=":terminology" element={<Technology />} />
+                    </Route>
                 </Route>
             </Routes>
         </ThemeProvider>

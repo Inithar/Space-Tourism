@@ -4,7 +4,7 @@ import { useCurrentLocation } from '../../hooks/useCurrentLocation';
 
 import { Outlet } from 'react-router-dom';
 
-import { homeImages, destinationImages, crewImages } from '../../data/images';
+import { homeImages, destinationImages, crewImages, technologyImages } from '../../data/images';
 
 import { Navigation } from '../../components/navigation/Navigation';
 import { PageContainer, Wrapper } from './MainLayout.styles';
@@ -23,6 +23,9 @@ export const MainLayout = () => {
                 break;
             case '/crew':
                 setBackgroundImage(crewImages.background);
+                break;
+            case '/technology':
+                setBackgroundImage(technologyImages.background);
                 break;
         }
     }, [pathname]);

@@ -92,6 +92,7 @@ export const Role = styled.p`
     }
 
     ${device.smallDesktop} {
+        margin-top: 0;
         text-align: start;
         font-size: 32px;
         line-height: 37px;

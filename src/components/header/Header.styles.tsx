@@ -20,14 +20,20 @@ export const Text = styled.h1`
 
     ${device.tablet} {
         margin-top: 40px;
+        padding-left: 38px;
         text-align: start;
     }
 
     ${device.smallDesktop} {
         margin-top: 76px;
+        padding-left: 98px;
         font-size: 28px;
         line-height: 34px;
         letter-spacing: 4.725px;
+    }
+
+    ${device.desktop} {
+        padding-left: 166px;
     }
 `;
 

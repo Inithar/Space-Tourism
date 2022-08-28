@@ -40,27 +40,29 @@ export const Destination = () => {
     const { name, images, description, distance, travel } = data.destinations[destinationIndex];
 
     return (
-        <Wrapper>
+        <>
             <Header text="Pick your destination" number="01" />
-            <Container>
-                <Image src={images.png} />
-                <DataContainer>
-                    <Navigation />
-                    <DestinationName>{name}</DestinationName>
-                    <DestinationDescription>{description}</DestinationDescription>
-                    <Line />
-                    <DataNumbersContainer>
-                        <DataBox>
-                            <DataName>Avg. Distance</DataName>
-                            <DataValue>{distance}</DataValue>
-                        </DataBox>
-                        <DataBox>
-                            <DataName>est. travel time</DataName>
-                            <DataValue>{travel}</DataValue>
-                        </DataBox>
-                    </DataNumbersContainer>
-                </DataContainer>
-            </Container>
-        </Wrapper>
+            <Wrapper>
+                <Container>
+                    <Image src={images.png} />
+                    <DataContainer>
+                        <Navigation />
+                        <DestinationName>{name}</DestinationName>
+                        <DestinationDescription>{description}</DestinationDescription>
+                        <Line />
+                        <DataNumbersContainer>
+                            <DataBox>
+                                <DataName>Avg. Distance</DataName>
+                                <DataValue>{distance}</DataValue>
+                            </DataBox>
+                            <DataBox>
+                                <DataName>est. travel time</DataName>
+                                <DataValue>{travel}</DataValue>
+                            </DataBox>
+                        </DataNumbersContainer>
+                    </DataContainer>
+                </Container>
+            </Wrapper>
+        </>
     );
 };

@@ -5,10 +5,8 @@ interface HeaderProps {
     number: string;
 }
 
-export const Header = ({ text, number }: HeaderProps) => {
-    return (
-        <Text>
-            <Number>{number}</Number> {text}
-        </Text>
-    );
-};
+export const Header = ({ text, number }: HeaderProps) => (
+    <Text>
+        <Number>{number}</Number> {text}
+    </Text>
+);
