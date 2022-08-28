@@ -6,6 +6,7 @@ import data from '../../data/data.json';
 import { Header } from '../../components/header/Header';
 import { Name } from '../../components/styled-elements/name/Name.styles';
 import { Container, ContentContainer, DataContainer, Image, Line, MemberDescription, Role, Wrapper } from './Crew.styles';
+import { Navigation } from './components/navigation/Navigation';
 
 export const Crew = () => {
     const crewMemberName = useCurrentLocation(2);
@@ -34,6 +35,7 @@ export const Crew = () => {
                 <Image src={images.png} />
                 <Line />
                 <Container>
+                    <Navigation />
                     <DataContainer>
                         <Role>{role}</Role>
                         <Name>{name}</Name>

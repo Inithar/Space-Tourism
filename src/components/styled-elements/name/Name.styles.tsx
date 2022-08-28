@@ -17,7 +17,11 @@ export const Name = styled.p`
 
     ${device.smallDesktop} {
         text-align: start;
-        font-size: 56px;
+        font-size: 50px;
         line-height: 64px;
+    }
+
+    ${device.desktop} {
+        font-size: 56px;
     }
 `;

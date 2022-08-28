@@ -60,6 +60,8 @@ export const Line = styled(BasicLine)`
 
 export const Container = styled.div`
     ${device.bigMobile} {
+        display: flex;
+        flex-direction: column;
         order: 1;
         margin: 0 auto;
         max-width: 458px;
@@ -67,7 +69,7 @@ export const Container = styled.div`
 
     ${device.smallDesktop} {
         margin: 154px 0 0;
-        max-width: 488px;
+        max-width: 614px;
     }
 `;
 
@@ -99,7 +101,12 @@ export const Role = styled.p`
 export const MemberDescription = styled(Description)`
     margin-top: 16px;
 
+    ${device.bigMobile} {
+        min-height: 112px;
+    }
+
     ${device.smallDesktop} {
         max-width: 444px;
+        min-height: 160px;
     }
 `;
