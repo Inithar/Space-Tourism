@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useGetDevice } from '../../hooks/useGetDevice';
 
+import { NavigationLink } from '../styled-elements/navigationLink/NavigationLink.styles';
 import {
     BurgerIcon,
-    Link,
     LinksContainer,
     LogoIcon,
     Wrapper,
@@ -32,10 +32,10 @@ export const Navigation = () => {
                     <BurgerIcon onClick={toggleMobileNavigation} />
                 ) : (
                     <LinksContainer>
-                        <Link to={'/'}>{isDesktop && <Number>00</Number>} Home</Link>
-                        <Link to={'/destination/moon'}>{isDesktop && <Number>01</Number>} Destination</Link>
-                        <Link to={'/crew'}>{isDesktop && <Number>02</Number>} Crew</Link>
-                        <Link to={'/technology'}>{isDesktop && <Number>03</Number>} Technology</Link>
+                        <NavigationLink to={'/'}>{isDesktop && <Number>00</Number>} Home</NavigationLink>
+                        <NavigationLink to={'/destination'}>{isDesktop && <Number>01</Number>} Destination</NavigationLink>
+                        <NavigationLink to={'/crew/Douglas_Hurley'}>{isDesktop && <Number>02</Number>} Crew</NavigationLink>
+                        <NavigationLink to={'/technology'}>{isDesktop && <Number>03</Number>} Technology</NavigationLink>
                     </LinksContainer>
                 )}
                 {isDesktop && <Line />}

@@ -17,7 +17,10 @@ function App() {
             <Routes>
                 <Route element={<MainLayout />}>
                     <Route index element={<Home />} />
-                    <Route path="destination/:place" element={<Destination />} />
+                    <Route path="destination" element={<Destination />}>
+                        <Route index />
+                        <Route path=":place" />
+                    </Route>
                     <Route path="crew/:member" element={<Crew />} />
                     <Route path="technology" element={<Technology />} />
                 </Route>

@@ -4,8 +4,8 @@ import { useCurrentLocation } from '../../hooks/useCurrentLocation';
 import data from '../../data/data.json';
 
 import { Header } from '../../components/header/Header';
-import { Container, ContentContainer, DataContainer, Image, Line, MemberDescription, Role, Wrapper } from './Crew.styles';
 import { Name } from '../../components/styled-elements/name/Name.styles';
+import { Container, ContentContainer, DataContainer, Image, Line, MemberDescription, Role, Wrapper } from './Crew.styles';
 
 export const Crew = () => {
     const crewMemberName = useCurrentLocation(2);

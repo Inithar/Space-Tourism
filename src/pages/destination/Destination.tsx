@@ -5,6 +5,7 @@ import data from '../../data/data.json';
 
 import { Header } from '../../components/header/Header';
 import { Line } from '../../components/styled-elements/line/Line.styles';
+import { Navigation } from './components/navigation/Navigation';
 import {
     Container,
     DataContainer,
@@ -44,6 +45,7 @@ export const Destination = () => {
             <Container>
                 <Image src={images.png} />
                 <DataContainer>
+                    <Navigation />
                     <DestinationName>{name}</DestinationName>
                     <DestinationDescription>{description}</DestinationDescription>
                     <Line />

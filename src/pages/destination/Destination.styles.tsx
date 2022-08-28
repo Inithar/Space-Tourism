@@ -61,7 +61,7 @@ export const DataContainer = styled.div`
 `;
 
 export const DestinationName = styled.p`
-    margin: 20px 0 0 0;
+    margin: 28px 0 0 0;
     text-align: center;
     font-family: 'Bellefair';
     font-size: 56px;
@@ -70,13 +70,13 @@ export const DestinationName = styled.p`
     color: ${({ theme }) => theme.pureWhiteColor};
 
     ${device.bigMobile} {
-        margin-top: 32px;
+        margin-top: 44px;
         font-size: 80px;
         line-height: 92px;
     }
 
     ${device.smallDesktop} {
-        margin-top: 37px;
+        margin-top: 49px;
         text-align: start;
         font-size: 100px;
         line-height: 115px;
