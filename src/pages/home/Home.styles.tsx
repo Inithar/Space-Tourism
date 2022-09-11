@@ -89,7 +89,22 @@ export const Text = styled(Description)`
     }
 `;
 
+export const ButtonContainer = styled.div`
+    position: relative;
+    margin-left: auto;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.6s;
+
+    &:hover {
+        background-color: ${({ theme }) => theme.glassColor};
+    }
+`;
+
 export const Button = styled.button`
+    position: absolute;
     margin-top: 81px;
     margin-bottom: 48px;
     width: 150px;
@@ -103,6 +118,8 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.blackColor};
     background-color: ${({ theme }) => theme.pureWhiteColor};
     border-radius: 50%;
+    opacity: 1;
+    z-index: 2;
 
     ${device.bigMobile} {
         margin-top: 156px;
@@ -114,9 +131,20 @@ export const Button = styled.button`
     }
 
     ${device.smallDesktop} {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         margin-left: auto;
         margin-bottom: 0;
+        margin-top: 0;
         width: 274px;
         height: 274px;
+    }
+
+    &:hover,
+    &:focus {
+        font-family: 'Bellefair';
+        color: ${({ theme }) => theme.blackColor};
+        background-color: ${({ theme }) => theme.pureWhiteColor};
     }
 `;

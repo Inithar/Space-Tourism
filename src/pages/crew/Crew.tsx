@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { useCurrentLocation } from '../../hooks/useCurrentLocation';
 
 import data from '../../data/data.json';

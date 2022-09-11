@@ -1,6 +1,9 @@
-import { Button, Text, Header, StyledSpan, TextContainer, Wrapper } from './Home.styles';
+import { useNavigate } from 'react-router-dom';
+import { Button, Text, Header, StyledSpan, TextContainer, Wrapper, ButtonContainer } from './Home.styles';
 
 export const Home = () => {
+    const navigate = useNavigate();
+
     return (
         <Wrapper>
             <TextContainer>
@@ -13,7 +16,9 @@ export const Home = () => {
                     Well sit back, and relax because we’ll give you a truly out of this world experience!
                 </Text>
             </TextContainer>
-            <Button>Explore</Button>
+            <ButtonContainer>
+                <Button onClick={() => navigate('/destination', { replace: true })}>Explore</Button>
+            </ButtonContainer>
         </Wrapper>
     );
 };
